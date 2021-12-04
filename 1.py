@@ -22,14 +22,18 @@ def menu_point(mode):
 #entry_point
 reading_mode = str(input("Input reading mode(f - file, i - input): "))
 text = menu_point(reading_mode)
-print(text)
 #count_alghorithm
 word_book = {}
 word = ""
 for letter in text:
+    if letter in [".", ",", "-", "?", "!"]:
+        letter = ""
     if letter != " ": #change all ".", ",", "-", "?", "!" to "" @MaxOmenes
         word+=letter
     else:
         if not (word in word_book):
-            word_book.append(word) #add new word in list
-        word_book[word]+=1 
+            word_book[word] = 0 #add new word in list
+        word_book[word]+=1
+        word = ""
+
+print(word_book)
