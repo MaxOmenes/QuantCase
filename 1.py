@@ -21,5 +21,13 @@ for letter in text:
         word = ""
 
 #write dict sort @MaxOmenes/
-#write dict sort @MaxOmene////
+#write dict sort @MaxOmenes///
+word_book = {key: value for key, value in sorted(word_book.items(), key= lambda value: value[1], reverse=True)}
+
+k = 60
+for element in word_book:
+    print(element)
+    k-=1
+    if k < 0:
+        break
 
