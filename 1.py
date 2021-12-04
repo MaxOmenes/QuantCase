@@ -25,3 +25,9 @@ text = menu_point(reading_mode)
 print(text)
 #count_alghorithm
 word_book = {}
+word = ""
+for letter in text:
+    if letter != " ": #change all ".", ",", "-", "?", "!" to "" @MaxOmenes
+        word+=letter
+    else:
+        pass #write word checking, adding word in word_book, k+=1 @MaxOmenes
