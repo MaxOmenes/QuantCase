@@ -8,7 +8,7 @@ text = f.read()
 word_book = {}
 word = ""
 for letter in text:
-    if letter in [".", ",", "-", "?", "!"]:
+    if letter in [".", ",", "-", "?", "!", "\r", "\n"]:
         letter = ""
     if letter != " ": #change all ".", ",", "-", "?", "!" to "" @MaxOmenes
         word+=letter
