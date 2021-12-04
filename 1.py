@@ -20,7 +20,7 @@ for letter in text:
         word_book[word]+=1
         word = ""
 
-#write dict sort @MaxOmenes//
+#write dict sort @MaxOmenes///
 OrderedDict(sorted(word_book.items(), key=lambda x: x[1], reverse=True))
 
 print(word_book)
