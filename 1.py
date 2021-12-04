@@ -20,5 +20,6 @@ for letter in text:
         word = ""
 
 #write dict sort @MaxOmenes
+OrderedDict(sorted(word_book.items(), key=lambda x: x[1], reverse=True))
 
 print(word_book)
