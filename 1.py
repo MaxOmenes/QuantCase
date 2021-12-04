@@ -18,6 +18,6 @@ for letter in text:
         word_book[word]+=1
         word = ""
 
-#write dict sort @MaxOmenes
+#write dict sort @MaxOmenes//
 
 print(word_book)
