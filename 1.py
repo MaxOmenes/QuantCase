@@ -7,8 +7,9 @@ text = f.read()
 #count_alghorithm
 word_book = {}
 word = ""
+special_symbols = [".", ",", "-", "?", "!", "\r", "\n", "(", ")", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":"]
 for letter in text:
-    if letter in [".", ",", "-", "?", "!", "\r", "\n"]:
+    if letter in special_symbols:
         letter = ""
     if letter != " ": #change all ".", ",", "-", "?", "!" to "" @MaxOmenes
         word+=letter
