@@ -1,5 +1,4 @@
 import codecs
-from collections import OrderedDict
 
 #entry_point
 file_path = str(input("Input file path: "))
@@ -8,7 +7,7 @@ text = f.read()
 #count_alghorithm
 word_book = {}
 word = ""
-special_symbols = [".", ",", "-", "?", "!", "\r", "\n", "(", ")", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":"]
+special_symbols = [".", ",","-","—", "?", "!", "\r", "\n", "(", ")", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":"]
 for letter in text:
     if letter in special_symbols:
         letter = ""
@@ -21,6 +20,12 @@ for letter in text:
         word = ""
 
 #write dict sort @MaxOmenes///
-OrderedDict(sorted(word_book.items(), key=lambda x: x[1], reverse=True))
+word_book = {key: value for key, value in sorted(word_book.items(), key= lambda value: value[1], reverse=True)}
 
-print(word_book)
+k = 60
+for element in word_book:
+    print(element)
+    k-=1
+    if k < 0:
+        break
+
