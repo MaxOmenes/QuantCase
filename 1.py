@@ -30,4 +30,6 @@ for letter in text:
     if letter != " ": #change all ".", ",", "-", "?", "!" to "" @MaxOmenes
         word+=letter
     else:
-        pass #write word checking, adding word in word_book, k+=1 @MaxOmenes
+        if not (word in word_book):
+            word_book.append(word) #add new word in list
+        word_book[word]+=1 
